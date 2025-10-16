@@ -19,5 +19,5 @@ docker-compose up
 - Streamlit
 - fastf1
 - Pandas
-- Matlotlib
+- Matplotlib
 - Docker
