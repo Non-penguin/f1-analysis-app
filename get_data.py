@@ -4,7 +4,7 @@ import pandas
 import os
 import matplotlib.pyplot as plt
 
-# fastf1のキャッシュを設定（2回目以降のデータ読み込みが高速になります）
+# fastf1のキャッシュを設定
 cache_path = 'ff1_cache'
 if not os.path.exists(cache_path):
     print(f"Cache directory '{cache_path}' not found. Creating it...")
@@ -28,7 +28,7 @@ print(ver_laps[['LapNumber', 'LapTime', 'TyreLife', 'Stint']])
 print("\nLando Norris Laps - 2023 Japanese GP")
 print(nor_laps[['LapNumber', 'LapTime', 'TyreLife', 'Stint']])
 
-# ラップタイムを秒単位に変換（プロットしやすくするため）
+# ラップタイムを秒単位に変換
 ver_lap_times = ver_laps['LapTime'].dt.total_seconds()
 nor_lap_times = nor_laps['LapTime'].dt.total_seconds()
 
@@ -48,4 +48,4 @@ plot_filename = 'lap_comparison.png'
 plt.savefig(os.path.join(os.path.dirname(__file__), plot_filename))
 print(f"Lap time comparison plot saved as {plot_filename}")
 
-plt.show() # グラフを表示（環境によっては表示されない場合があります）
+plt.show() # グラフを表示
