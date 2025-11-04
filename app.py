@@ -26,7 +26,7 @@ def load_session_data(year, gp, session_type):
 
 # サイドバーでの入力
 st.sidebar.header('Select Race Details')
-year = st.sidebar.selectbox('Year', options=range(2023, 2017, -1), index=0) # 2023年から2018年まで
+year = st.sidebar.selectbox('Year', options=range(2025, 2017, -1), index=0) # 2023年から2018年まで
 
 # 利用可能なグランプリを取得（初回ロード時のみ）
 @st.cache_data
