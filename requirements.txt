@@ -49,3 +49,4 @@ wheel==0.42.0
 zope.interface==6.1
 streamlit
 fastf1
+plotly
